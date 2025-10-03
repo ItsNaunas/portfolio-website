@@ -11,62 +11,75 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
         when: "beforeChildren",
       },
     },
   };
 
-  // Centered stack animation (initial state)
-  const centeredStackVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+  // Word-by-word reveal variants (centered stack)
+  const wordRevealVariants = {
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      scale: 1,
+      y: 0,
       transition: { 
-        duration: 0.5, 
-        ease: "easeOut",
-        delay: 0.1
+        duration: 0.22, 
+        ease: "easeOut"
       },
     },
   };
 
-  // Side elements slide in variants with staggered delays
+  // Side elements slide in variants with precise timing
   const slideInFromLeft = {
-    hidden: { opacity: 0, x: -32 },
+    hidden: { opacity: 0, x: -40 },
     visible: {
       opacity: 1,
       x: 0,
       transition: { 
-        duration: 0.6, 
+        duration: 0.45, 
         ease: "easeOut",
-        delay: 0.65 // 0.5s (centered stack) + 0.15s (byline delay)
+        delay: 0.52 // After last word (0.3s) + 0.22s delay
       },
     },
   };
 
   const slideInFromRight = {
-    hidden: { opacity: 0, x: 32 },
+    hidden: { opacity: 0, x: 40 },
     visible: {
       opacity: 1,
       x: 0,
       transition: { 
-        duration: 0.6, 
+        duration: 0.45, 
         ease: "easeOut",
-        delay: 0.75 // 0.5s (centered stack) + 0.25s (stat block delay)
+        delay: 0.58 // After last word (0.3s) + 0.28s delay
       },
     },
   };
 
   const slideInFromLeftCTA = {
-    hidden: { opacity: 0, x: -24 },
+    hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
       x: 0,
       transition: { 
-        duration: 0.6, 
+        duration: 0.45, 
         ease: "easeOut",
-        delay: 0.8 // 0.5s (centered stack) + 0.3s (CTA delay)
+        delay: 0.64 // After last word (0.3s) + 0.34s delay
+      },
+    },
+  };
+
+  // Layout shift variants for smooth transition from centered to final layout
+  const layoutShiftVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.5, 
+        ease: "easeOut",
+        delay: 0.52 // Start shifting when side elements begin sliding
       },
     },
   };
@@ -91,9 +104,9 @@ export default function Hero() {
               <div>NAUNAS</div>
             </motion.div>
             
-            {/* CONSULTANT - part of centered stack */}
+            {/* CONSULTANT - word reveal (0.0s) */}
             <motion.h1 
-              variants={centeredStackVariants}
+              variants={wordRevealVariants}
               className="headline-xl text-white"
             >
               CONSULTANT
@@ -104,10 +117,11 @@ export default function Hero() {
           <div className="space-y-12">
             {/* AGENCIES with orange stat block */}
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-              {/* AGENCIES - part of centered stack */}
+              {/* AGENCIES - word reveal (0.08s delay) */}
               <motion.h1 
-                variants={centeredStackVariants}
+                variants={wordRevealVariants}
                 className="headline-xl text-white"
+                transition={{ delay: 0.08 }}
               >
                 AGENCIES
               </motion.h1>
@@ -132,10 +146,11 @@ export default function Hero() {
                 </Link>
               </motion.div>
               
-              {/* COACHES - part of centered stack */}
+              {/* COACHES - word reveal (0.16s delay) */}
               <motion.h1 
-                variants={centeredStackVariants}
+                variants={wordRevealVariants}
                 className="headline-xl text-white"
+                transition={{ delay: 0.16 }}
               >
                 COACHES
               </motion.h1>
