@@ -8,6 +8,13 @@ export default function RotatingStat() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      return; // Don't start rotation if user prefers reduced motion
+    }
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % rotatingStats.length);
     }, 2200);
