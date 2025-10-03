@@ -1,39 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { rotatingStats } from "@/lib/data";
 
 export default function RotatingStat() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [i, setI] = useState(0);
+  const reduce = useReducedMotion();
 
   useEffect(() => {
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersReducedMotion) {
-      return; // Don't start rotation if user prefers reduced motion
-    }
+    if (reduce) return;
+    const id = setInterval(() => {
+      setI((p) => (p + 1) % rotatingStats.length);
+    }, 2400); // a hair slower for readability
+    return () => clearInterval(id);
+  }, [reduce]);
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % rotatingStats.length);
-    }, 2200);
-
-    return () => clearInterval(interval);
-  }, []);
+  const item = rotatingStats[i]?.text ?? "";
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, y: 20 }}
+          key={i}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="absolute font-display text-[clamp(20px,3.5vw,32px)] tracking-tight text-center"
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="font-display text-[clamp(20px,3.5vw,32px)] tracking-tight text-center"
         >
-          {rotatingStats[currentIndex].text}
+          {item}
         </motion.div>
       </AnimatePresence>
     </div>
