@@ -5,9 +5,8 @@ import Offer from "@/components/Offer";
 import HowItWorks from "@/components/HowItWorks";
 import StatsBand from "@/components/StatsBand";
 import CaseGrid from "@/components/CaseGrid";
-import Process from "@/components/Process";
+import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
-import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,10 +19,9 @@ export default function Home() {
         <Offer />
         <HowItWorks />
         <StatsBand />
-        <CaseGrid />
-        <Process />
         <TechStack />
-        <FooterCTA />
+        <CaseGrid />
+        <Testimonials />
       </main>
       <Footer />
     </>

@@ -74,6 +74,29 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* CTA Section */}
+        <div className="border-t border-white/10 pt-12 pb-8">
+          <div className="text-center space-y-6">
+            <h2 className="headline-lg text-white">
+              READY TO CONVERT?
+            </h2>
+
+            <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
+              7-day average delivery • Conversion-first design • Results guaranteed
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="#call" className="btn text-lg px-12 py-5">
+                JOIN NOW
+              </Link>
+            </div>
+
+            <p className="text-white/50 text-xs font-body">
+              Book a call to discuss your project
+            </p>
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 pb-6">
           <p className="text-white/40 text-xs font-body text-center">
