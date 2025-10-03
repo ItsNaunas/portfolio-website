@@ -1,8 +1,7 @@
 export const rotatingStats = [
-  { text: "CLIENT 1" },
-  { text: "CLIENT 2" },
-  { text: "CLIENT 3" },
-  { text: "CLIENT 4" },
+  { text: "+82% LEADS" },
+  { text: "7-DAY DELIVERY" },
+  { text: "25+ PROJECTS" },
 ];
 
 export const marqueeLogos = [
