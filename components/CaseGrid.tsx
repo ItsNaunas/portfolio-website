@@ -76,7 +76,7 @@ export default function CaseGrid() {
               initial={{ opacity: 0, y: 24, rotate: idx % 2 === 0 ? -2 : 2 }}
               animate={isInView ? { opacity: 1, y: 0, rotate: idx % 2 === 0 ? -2 : 2 } : {}}
               whileHover={{ rotate: 0, y: -8, scale: 1.02 }}
-              transition={{ duration: 0.3, delay: 0.4 + idx * 0.1 }}
+              transition={{ duration: 0.3 }}
               className="group"
             >
               <Link href={`/case/${study.slug}`} className="block">
