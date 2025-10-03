@@ -9,23 +9,28 @@ export default function StatsBand() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="bg-signal py-12 md:py-16">
+    <section ref={ref} className="bg-signal py-16 md:py-20">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="text-center md:text-left"
+              className="flex flex-col items-center text-center space-y-4"
             >
-              <p className="font-display text-[clamp(32px,5vw,56px)] text-ink leading-none mb-2">
+              {/* Number - Big, bold, white */}
+              <p className="font-display text-[clamp(28px,4.5vw,48px)] text-white leading-none font-bold">
                 {stat.metric}
               </p>
-              <p className="text-ink/80 font-body text-sm tracking-wide uppercase">
-                {stat.label}
-              </p>
+              
+              {/* Label - Same size, uppercase, bold, black */}
+              <div className="font-display text-[clamp(28px,4.5vw,48px)] text-ink leading-tight font-bold uppercase tracking-wide">
+                {stat.label.split(' ').map((word, wordIdx) => (
+                  <p key={wordIdx}>{word}</p>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

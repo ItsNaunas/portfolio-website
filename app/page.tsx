@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoMarquee from "@/components/LogoMarquee";
 import Offer from "@/components/Offer";
-import CaseHighlight from "@/components/CaseHighlight";
+import HowItWorks from "@/components/HowItWorks";
 import StatsBand from "@/components/StatsBand";
 import CaseGrid from "@/components/CaseGrid";
 import Process from "@/components/Process";
@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
         <LogoMarquee />
         <Offer />
-        <CaseHighlight />
+        <HowItWorks />
         <StatsBand />
         <CaseGrid />
         <Process />

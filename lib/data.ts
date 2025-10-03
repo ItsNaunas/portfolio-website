@@ -9,8 +9,6 @@ export const marqueeLogos = [
   "/logos/client2.svg",
   "/logos/client3.svg",
   "/logos/client4.svg",
-  "/logos/client5.svg",
-  "/logos/client6.svg",
 ];
 
 export const offerBullets = [

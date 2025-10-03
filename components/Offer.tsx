@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { offerBullets } from "@/lib/data";
+import { offerBullets, mainCaseHighlight } from "@/lib/data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
@@ -17,24 +17,33 @@ export default function Offer() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-2 gap-12 md:gap-16"
+          className="grid md:grid-cols-2 gap-8 md:gap-16"
         >
-          {/* Left: Headline */}
-          <div>
-            <h2 className="headline-lg text-white">
+          {/* Left Column: Text-driven */}
+          <div className="space-y-6">
+            {/* Headline */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="headline-lg text-white leading-tight"
+            >
               WEBSITES & SYSTEMS THAT TURN CLICKS INTO CLIENTS
-            </h2>
-          </div>
+            </motion.h2>
 
-          {/* Right: Bullets + CTA */}
-          <div className="space-y-8">
-            <ul className="space-y-4">
+            {/* Bullet List */}
+            <motion.ul
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-4"
+            >
               {offerBullets.map((bullet, idx) => (
                 <motion.li
                   key={idx}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
                   className="flex items-start gap-3"
                 >
                   <svg
@@ -49,21 +58,98 @@ export default function Offer() {
                   <span className="text-white/90 font-body text-lg">{bullet}</span>
                 </motion.li>
               ))}
-            </ul>
+            </motion.ul>
 
-            {/* CTA Strip */}
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-signal/10 border border-signal/20 p-6 space-y-4"
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="pt-4"
             >
-              <p className="text-white/80 font-body text-sm">
-                WANT RESULTS LIKE THIS?
-              </p>
               <Link href="#call" className="btn">
                 BOOK A CALL
               </Link>
+            </motion.div>
+
+            {/* Testimonial Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="bg-[#121212] p-6 space-y-4"
+            >
+              <div className="flex items-start gap-4">
+                {/* Client Headshot */}
+                <div className="w-12 h-12 bg-signal/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 bg-signal rounded-full"></div>
+                </div>
+                
+                <div className="space-y-2">
+                  {/* Quote */}
+                  <p className="text-white/80 font-body text-sm italic">
+                    "Naunas transformed our website into a lead generation machine. The results speak for themselves."
+                  </p>
+                  
+                  {/* Client Info */}
+                  <div>
+                    <p className="text-white font-body text-sm font-medium">Sarah Johnson</p>
+                    <p className="text-white/60 font-body text-xs">CEO, TechStart</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Visual-driven */}
+          <div className="space-y-6">
+            {/* Video Player Mockup */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-[#121212] border border-white/10 rounded-lg overflow-hidden"
+            >
+              <div className="aspect-video bg-ink relative flex items-center justify-center">
+                {/* Orange Play Button */}
+                <div className="w-16 h-16 bg-signal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-ink ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-signal/5 to-transparent" />
+              </div>
+            </motion.div>
+
+            {/* Problem/Solution/Results */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="space-y-4"
+            >
+              {/* Problem */}
+              <div>
+                <p className="text-signal font-body text-xs tracking-wide uppercase mb-1">Problem</p>
+                <p className="text-white/90 font-body text-sm">{mainCaseHighlight.problem}</p>
+              </div>
+
+              {/* Solution */}
+              <div>
+                <p className="text-signal font-body text-xs tracking-wide uppercase mb-1">Solution</p>
+                <p className="text-white/90 font-body text-sm">{mainCaseHighlight.solution}</p>
+              </div>
+
+              {/* Results Card */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="bg-signal text-ink px-6 py-4"
+              >
+                <p className="font-display text-2xl font-bold">{mainCaseHighlight.result}</p>
+              </motion.div>
             </motion.div>
           </div>
         </motion.div>

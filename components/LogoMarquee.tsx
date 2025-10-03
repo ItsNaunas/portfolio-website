@@ -6,12 +6,12 @@ import Image from "next/image";
 
 export default function LogoMarquee() {
   return (
-    <section className="bg-signal py-6">
+    <section className="bg-signal py-12">
       <Marquee speed={50} gradient={false} pauseOnHover>
-        {marqueeLogos.map((logo, idx) => (
-          <div key={idx} className="mx-12 flex items-center justify-center">
+        {[...marqueeLogos, ...marqueeLogos, ...marqueeLogos, ...marqueeLogos].map((logo, idx) => (
+          <div key={idx} className="mx-8 flex items-center justify-center">
             {/* TODO: Replace with actual logo images */}
-            <div className="w-24 h-12 bg-ink/10 flex items-center justify-center text-ink font-display text-xs">
+            <div className="w-32 h-16 bg-ink/10 flex items-center justify-center text-ink font-display text-sm">
               logo
             </div>
           </div>
