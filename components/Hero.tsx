@@ -105,7 +105,7 @@ export default function Hero() {
                     ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.18 } }
                     : { opacity: 0, x: 36 }
                 }
-                className={phase === "final" ? "bg-signal text-ink px-12 py-10 min-w-[400px] h-[120px] flex items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
+                className={phase === "final" ? "bg-signal text-ink px-16 py-12 min-w-[480px] h-[140px] flex items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
               >
                 <RotatingStat />
               </motion.div>
@@ -128,7 +128,7 @@ export default function Hero() {
               >
                 <Link
                   href="#join"
-                  className="btn inline-block min-w-[400px] h-[120px] flex items-center justify-center text-[clamp(20px,3.5vw,32px)] font-bold"
+                  className="btn inline-block min-w-[480px] h-[140px] flex items-center justify-center text-[clamp(20px,3.5vw,32px)] font-bold"
                 >
                   JOIN
                 </Link>

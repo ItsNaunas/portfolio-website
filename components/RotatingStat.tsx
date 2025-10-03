@@ -27,7 +27,7 @@ export default function RotatingStat() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-[clamp(20px,3.5vw,32px)] tracking-tight text-center"
+          className="font-display text-[clamp(24px,4vw,36px)] tracking-tight text-center"
         >
           {item}
         </motion.div>
