@@ -114,7 +114,7 @@ const testimonials = [
       <p>
         Naunas transformed our website into a lead generation machine.
         <Highlight>Our conversion rate increased by 82% in just 7 days.</Highlight> The 
-        results speak for themselves - we're now booking 3x more qualified calls.
+        results speak for themselves - we&apos;re now booking 3x more qualified calls.
       </p>
     ),
   },
@@ -136,8 +136,8 @@ const testimonials = [
     company: 'FitnessPro',
     description: (
       <p>
-        The ROI has been incredible. <Highlight>We're generating 5x more qualified 
-        leads</Highlight> since implementing Naunas' system. The automation alone 
+        The ROI has been incredible. <Highlight>We&apos;re generating 5x more qualified 
+        leads</Highlight> since implementing Naunas&apos; system. The automation alone 
         saves us 10 hours per week.
       </p>
     ),
@@ -160,7 +160,7 @@ const testimonials = [
     company: 'Enterprise Solutions',
     description: (
       <p>
-        Best investment we've made this year. <Highlight>Sales qualified leads 
+        Best investment we&apos;ve made this year. <Highlight>Sales qualified leads 
         increased by 156%</Highlight> and our sales cycle shortened by 40%. 
         Naunas delivers results.
       </p>
@@ -173,7 +173,7 @@ const testimonials = [
     description: (
       <p>
         The system Naunas built is incredibly sophisticated yet simple to use.
-        <Highlight>We're converting 3x more visitors into paying customers.</Highlight> 
+        <Highlight>We&apos;re converting 3x more visitors into paying customers.</Highlight> 
         The analytics and tracking are second to none.
       </p>
     ),
@@ -198,7 +198,7 @@ export default function Testimonials() {
             WHAT CLIENTS SAY
           </h2>
           <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what <span className="text-signal font-semibold">real clients</span> are saying about working with us.
+            Don&apos;t just take our word for it. Here&apos;s what <span className="text-signal font-semibold">real clients</span> are saying about working with us.
           </p>
         </motion.div>
 

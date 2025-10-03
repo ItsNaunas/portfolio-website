@@ -88,7 +88,7 @@ export default function Offer() {
                 <div className="space-y-2">
                   {/* Quote */}
                   <p className="text-white/80 font-body text-sm italic">
-                    "Naunas transformed our website into a lead generation machine. The results speak for themselves."
+                    &quot;Naunas transformed our website into a lead generation machine. The results speak for themselves.&quot;
                   </p>
                   
                   {/* Client Info */}
