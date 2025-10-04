@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Naunas — Websites & Systems That Convert",
   description: "CRO-focused websites, AI automations, and marketing campaigns that turn clicks into clients. 7-day delivery. 25+ projects completed.",
   keywords: ["conversion optimization", "web design", "CRO", "AI automation", "marketing"],
+  icons: {
+    icon: "/logos/favicon.png",
+  },
 };
 
 export default function RootLayout({
