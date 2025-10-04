@@ -23,9 +23,9 @@ export default function CaseGrid() {
               className="group"
             >
               <Link href={`/case/${study.slug}`} className="block">
-                <div className="bg-white/5 border border-white/10 p-6 space-y-6 transition-all duration-300 hover:border-signal/30">
+                <div className="bg-white/5 border border-white/10 p-4 md:p-6 space-y-4 md:space-y-6 transition-all duration-300 hover:border-signal/30">
                   {/* Device frame */}
-                   <div className="aspect-[4/3] bg-ink border border-white/10 rounded overflow-hidden relative">
+                   <div className="aspect-[4/3] md:aspect-[4/3] aspect-[3/2] bg-ink border border-white/10 rounded overflow-hidden relative">
                      {study.image ? (
                        <img
                          src={study.image}
@@ -46,12 +46,12 @@ export default function CaseGrid() {
                   <div className="space-y-3">
                     <div>
                       <p className="text-signal font-body text-xs tracking-wide uppercase">Challenge</p>
-                      <p className="text-white/80 text-sm mt-1">{study.problem}</p>
+                      <p className="text-white/80 text-sm md:text-base mt-1">{study.problem}</p>
                     </div>
 
                     <div>
                       <p className="text-signal font-body text-xs tracking-wide uppercase">Outcome</p>
-                      <p className="text-white font-body text-lg mt-1">{study.result}</p>
+                      <p className="text-white font-body text-base md:text-lg mt-1">{study.result}</p>
                     </div>
 
                     <div className="pt-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -89,9 +89,9 @@ export default function CaseGrid() {
               className="group"
             >
               <Link href={`/case/${study.slug}`} className="block">
-                <div className="bg-white/5 border border-white/10 p-6 space-y-6 transition-all duration-300 hover:border-signal/30">
+                <div className="bg-white/5 border border-white/10 p-4 md:p-6 space-y-4 md:space-y-6 transition-all duration-300 hover:border-signal/30">
                   {/* Device frame */}
-                   <div className="aspect-[4/3] bg-ink border border-white/10 rounded overflow-hidden relative">
+                   <div className="aspect-[4/3] md:aspect-[4/3] aspect-[3/2] bg-ink border border-white/10 rounded overflow-hidden relative">
                      {study.image ? (
                        <img
                          src={study.image}
@@ -112,12 +112,12 @@ export default function CaseGrid() {
                   <div className="space-y-3">
                     <div>
                       <p className="text-signal font-body text-xs tracking-wide uppercase">Challenge</p>
-                      <p className="text-white/80 text-sm mt-1">{study.problem}</p>
+                      <p className="text-white/80 text-sm md:text-base mt-1">{study.problem}</p>
                     </div>
 
                     <div>
                       <p className="text-signal font-body text-xs tracking-wide uppercase">Outcome</p>
-                      <p className="text-white font-body text-lg mt-1">{study.result}</p>
+                      <p className="text-white font-body text-base md:text-lg mt-1">{study.result}</p>
                     </div>
 
                     <div className="pt-2 opacity-0 group-hover:opacity-100 transition-opacity">

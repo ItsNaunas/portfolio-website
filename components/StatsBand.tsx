@@ -59,7 +59,7 @@ function StatItem({ stat, idx, isInView }: { stat: { metric: string; label: stri
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className="flex flex-col items-center text-center space-y-4"
+      className="flex flex-col items-center text-center space-y-6"
     >
       {/* Number - Big, bold, white with count-up animation */}
       <p className="font-display text-[clamp(28px,4.5vw,48px)] text-white leading-none font-bold">
@@ -81,9 +81,9 @@ export default function StatsBand() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="bg-signal py-16 md:py-20">
+    <section ref={ref} className="bg-signal py-20 md:py-24 lg:py-28">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
           {stats.map((stat, idx) => (
             <StatItem key={idx} stat={stat} idx={idx} isInView={isInView} />
           ))}

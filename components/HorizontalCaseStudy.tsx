@@ -47,7 +47,7 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
               className="space-y-6"
             >
               <motion.h1 
-                className="headline-lg text-white"
+                className="headline-md md:headline-lg text-white"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
@@ -55,7 +55,7 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
               </motion.h1>
               {detailedData?.tagline && (
                 <motion.p 
-                  className="text-signal font-display text-2xl max-w-3xl mx-auto"
+                  className="text-signal font-display text-xl md:text-2xl max-w-3xl mx-auto"
                   whileHover={{ scale: 1.01 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -63,7 +63,7 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                 </motion.p>
               )}
               <motion.p 
-                className="text-white font-body text-2xl"
+                className="text-white font-body text-xl md:text-2xl"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
@@ -122,12 +122,12 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10"
+                  className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-8 border-t border-white/10"
                 >
                   {detailedData.hero.metrics.map((metric: string, index: number) => (
                     <motion.div 
                       key={index} 
-                      className="text-center p-4 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
+                      className="text-center p-3 md:p-4 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
                       whileHover={{ 
                         scale: 1.05,
                         backgroundColor: "rgba(242, 97, 63, 0.05)",
@@ -135,7 +135,7 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                       }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="text-signal font-display text-2xl mb-1">
+                      <div className="text-signal font-display text-lg md:text-2xl mb-1">
                         {metric}
                       </div>
                     </motion.div>
@@ -149,31 +149,31 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
     {
       id: "summary",
       title: "Executive Summary",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
-          <div className="max-w-6xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-12"
-            >
+       content: (
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
+           <div className="max-w-6xl text-center px-4 md:px-8">
+             <motion.div
+               initial={{ opacity: 0, y: 24 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6 }}
+               viewport={{ once: true }}
+               className="space-y-8 md:space-y-12"
+             >
               <div className="text-center space-y-4">
                 <motion.h2 
-                  className="headline-md text-white"
+                  className="headline-sm md:headline-md text-white"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 >
                   Executive Summary
                 </motion.h2>
-                <p className="text-white/70 font-body text-lg max-w-3xl mx-auto">
-                  A comprehensive overview of the problem, solution, and business model.
-                </p>
+                 <p className="text-white/70 font-body text-sm md:text-base max-w-3xl mx-auto px-4">
+                   A comprehensive overview of the problem, solution, and business model.
+                 </p>
               </div>
               
-              {detailedData?.executiveSummary && (
-                <div className="grid md:grid-cols-3 gap-8">
+               {detailedData?.executiveSummary && (
+                 <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                   {[
                     { title: "The Problem", content: detailedData.executiveSummary.problem },
                     { title: "The Solution", content: detailedData.executiveSummary.solution },
@@ -181,7 +181,7 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                   ].map((item, index) => (
                     <motion.div 
                       key={index}
-                      className="space-y-4 p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
+                       className="space-y-3 md:space-y-4 p-3 md:p-4 lg:p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
                       whileHover={{ 
                         scale: 1.02,
                         backgroundColor: "rgba(242, 97, 63, 0.05)",
@@ -190,9 +190,9 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                       transition={{ duration: 0.2 }}
                     >
                       <h3 className="text-signal font-display text-sm uppercase tracking-wide">{item.title}</h3>
-                      <p className="text-white/80 font-body text-lg leading-relaxed">
-                        {item.content}
-                      </p>
+                       <p className="text-white/80 font-body text-sm md:text-base lg:text-lg leading-relaxed">
+                         {item.content}
+                       </p>
                     </motion.div>
                   ))}
                 </div>
@@ -205,10 +205,10 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
     {
       id: "architecture",
       title: "Technical Architecture",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
-          <div className="max-w-6xl text-center">
-            {detailedData?.technicalArchitecture && (
+       content: (
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
+           <div className="max-w-6xl text-center px-4 md:px-8">
+             {detailedData?.technicalArchitecture && (
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
@@ -230,10 +230,10 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
     {
       id: "timeline",
       title: "Development Process",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
-          <div className="max-w-6xl text-center">
-            {detailedData?.developmentProcess?.timeline && (
+       content: (
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
+           <div className="max-w-6xl text-center px-4 md:px-8">
+             {detailedData?.developmentProcess?.timeline && (
               <motion.div
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.2 }}
@@ -246,91 +246,13 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
       )
     },
     {
-      id: "code",
-      title: "Code Highlights",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95 py-16">
-          <div className="max-w-5xl mx-auto px-8">
-            <div className="space-y-8">
-              <div className="text-center space-y-4">
-                <motion.h2 
-                  className="headline-md text-white"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  Code Highlights
-                </motion.h2>
-                <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
-                  Key technical implementations that demonstrate the complexity and sophistication of this project.
-                </p>
-              </div>
-                  <div className="grid gap-6">
-                    {detailedData?.codeHighlights?.slice(0, 2).map((highlight: any, index: number) => (
-                      <motion.div 
-                        key={index} 
-                        className="space-y-4"
-                        whileHover={{ scale: 1.01 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <div className="space-y-2">
-                          <h3 className="text-white font-display text-lg">{highlight.title}</h3>
-                          <p className="text-white/80 font-body text-sm leading-relaxed">
-                            {highlight.description}
-                          </p>
-                        </div>
-
-                        <motion.div 
-                          className="relative group"
-                          whileHover={{ scale: 1.01 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <div className="bg-ink border border-white/10 rounded-lg overflow-hidden cursor-pointer hover:border-signal/30 transition-colors duration-200">
-                            <div className="bg-white/5 px-4 py-2 border-b border-white/10">
-                              <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                <span className="ml-4 text-white/60 font-body text-sm">{highlight.language}</span>
-                              </div>
-                            </div>
-                            <pre className="p-4 overflow-x-auto max-h-64">
-                              <code className="text-white/90 font-mono text-xs leading-relaxed">
-                                {highlight.code.length > 500 ? highlight.code.substring(0, 500) + '...' : highlight.code}
-                              </code>
-                            </pre>
-                          </div>
-                        </motion.div>
-
-                        {highlight.explanation && (
-                          <motion.div 
-                            className="p-4 bg-signal/10 border border-signal/20 rounded-lg cursor-pointer"
-                            whileHover={{ 
-                              scale: 1.01,
-                              backgroundColor: "rgba(242, 97, 63, 0.15)"
-                            }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            <p className="text-white/90 font-body text-sm leading-relaxed">
-                              {highlight.explanation}
-                            </p>
-                          </motion.div>
-                        )}
-                      </motion.div>
-                    ))}
-                  </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
       id: "results",
       title: "Results & Metrics",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
-          <div className="max-w-6xl text-center">
-            {detailedData?.results && (
-              <div className="space-y-12">
+       content: (
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
+           <div className="max-w-6xl text-center px-4 md:px-8">
+             {detailedData?.results && (
+               <div className="space-y-8 md:space-y-12">
                 <div className="text-center space-y-4">
                   <motion.h2 
                     className="headline-md text-white"
@@ -339,9 +261,9 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                   >
                     Results & Metrics
                   </motion.h2>
-                  <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
-                    Measurable outcomes that demonstrate the success and impact of this project.
-                  </p>
+                   <p className="text-white/70 font-body text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-4">
+                     Measurable outcomes that demonstrate the success and impact of this project.
+                   </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8">
                   <motion.div
@@ -381,11 +303,11 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
     {
       id: "lessons",
       title: "Lessons Learned",
-      content: (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
-          <div className="max-w-6xl text-center">
-            {detailedData?.lessonsLearned && (
-              <div className="space-y-12">
+       content: (
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-ink via-ink to-ink/95">
+           <div className="max-w-6xl text-center px-4 md:px-8">
+             {detailedData?.lessonsLearned && (
+               <div className="space-y-8 md:space-y-12">
                 <div className="text-center space-y-4">
                   <motion.h2 
                     className="headline-md text-white"
@@ -394,13 +316,13 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                   >
                     Lessons Learned
                   </motion.h2>
-                  <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
-                    Insights gained from building this project and recommendations for future development.
-                  </p>
+                   <p className="text-white/70 font-body text-sm md:text-base lg:text-lg max-w-2xl mx-auto px-4">
+                     Insights gained from building this project and recommendations for future development.
+                   </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                   <motion.div 
-                    className="space-y-6 p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
+                    className="space-y-4 md:space-y-6 p-4 md:p-5 lg:p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
                     whileHover={{ 
                       scale: 1.02,
                       backgroundColor: "rgba(242, 97, 63, 0.05)",
@@ -420,8 +342,8 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                       ))}
                     </ul>
                   </motion.div>
-                  <motion.div 
-                    className="space-y-6 p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
+                   <motion.div 
+                     className="space-y-4 md:space-y-6 p-4 md:p-5 lg:p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
                     whileHover={{ 
                       scale: 1.02,
                       backgroundColor: "rgba(242, 97, 63, 0.05)",
@@ -441,8 +363,8 @@ export default function HorizontalCaseStudy({ caseStudy, detailedData }: Horizon
                       ))}
                     </ul>
                   </motion.div>
-                  <motion.div 
-                    className="space-y-6 p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
+                   <motion.div 
+                     className="space-y-4 md:space-y-6 p-4 md:p-5 lg:p-6 bg-white/5 border border-white/10 rounded-lg cursor-pointer"
                     whileHover={{ 
                       scale: 1.02,
                       backgroundColor: "rgba(242, 97, 63, 0.05)",

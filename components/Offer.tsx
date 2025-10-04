@@ -26,7 +26,7 @@ export default function Offer() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="headline-lg text-white leading-tight"
+              className="headline-md md:headline-lg text-white leading-tight"
             >
               WEBSITES & SYSTEMS THAT TURN CLICKS INTO CLIENTS
             </motion.h2>
@@ -55,7 +55,7 @@ export default function Offer() {
                   >
                     <path d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-white/90 font-body text-lg">{bullet}</span>
+                  <span className="text-white/90 font-body text-base md:text-lg">{bullet}</span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -77,7 +77,7 @@ export default function Offer() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="bg-[#121212] p-6 space-y-4"
+              className="bg-[#121212] p-4 md:p-6 space-y-4"
             >
               <div className="flex items-start gap-4">
                 {/* Client Headshot */}
@@ -87,7 +87,7 @@ export default function Offer() {
                 
                 <div className="space-y-2">
                   {/* Quote */}
-                  <p className="text-white/80 font-body text-sm italic">
+                  <p className="text-white/80 font-body text-sm md:text-base italic">
                     &quot;Naunas transformed our website into a lead generation machine. The results speak for themselves.&quot;
                   </p>
                   

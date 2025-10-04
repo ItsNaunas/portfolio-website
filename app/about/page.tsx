@@ -16,15 +16,15 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto space-y-12">
             {/* Hero */}
             <div className="space-y-6">
-              <h1 className="headline-lg text-white">ABOUT ME</h1>
-              <p className="text-white/70 text-xl font-body leading-relaxed">
+              <h1 className="headline-md md:headline-lg text-white">ABOUT ME</h1>
+              <p className="text-white/70 text-lg md:text-xl font-body leading-relaxed">
                 I build websites and systems that actually convert. No fluff, no generic templates—just
                 high-performance digital experiences designed to turn clicks into clients.
               </p>
             </div>
 
             {/* Photo placeholder */}
-            <div className="aspect-square md:aspect-video bg-white/5 border border-white/10 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] md:aspect-video bg-white/5 border border-white/10 rounded-lg overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-signal/10 to-transparent flex items-center justify-center">
                 <p className="text-white/30 font-body text-sm">Photo placeholder</p>
               </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
             {/* Bio */}
             <div className="space-y-6">
               <h2 className="headline-sm text-white">THE MISSION</h2>
-              <div className="space-y-4 text-white/70 font-body text-lg leading-relaxed">
+              <div className="space-y-4 text-white/70 font-body text-base md:text-lg leading-relaxed">
                 <p>
                   Most websites are beautiful but broken. They look great in mockups but fail to convert
                   real visitors into paying customers.
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 ].map((principle, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-signal mt-3 flex-shrink-0" />
-                    <span className="text-white/80 font-body text-lg">{principle}</span>
+                    <span className="text-white/80 font-body text-base md:text-lg">{principle}</span>
                   </li>
                 ))}
               </ul>
