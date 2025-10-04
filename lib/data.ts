@@ -75,12 +75,14 @@ export const processSteps = [
 ];
 
 export const tech = [
-  { name: "Next.js", icon: "/logos/tech/nextjs.svg" },
-  { name: "Tailwind", icon: "/logos/tech/tailwind.svg" },
+  { name: "Next.js", icon: "/logos/tech/nextdotjs.svg" },
+  { name: "Tailwind", icon: "/logos/tech/tailwindcss.svg" },
   { name: "Supabase", icon: "/logos/tech/supabase.svg" },
   { name: "Vercel", icon: "/logos/tech/vercel.svg" },
-  { name: "Cloudflare", icon: "/logos/tech/cloudflare.svg" },
-  { name: "Resend", icon: "/logos/tech/resend.svg" },
+  { name: "Docker", icon: "/logos/tech/docker.svg" },
+  { name: "n8n", icon: "/logos/tech/n8n.svg" },
+  { name: "Stripe", icon: "/logos/tech/stripe.svg" },
+  { name: "OpenAI", icon: "/logos/tech/openai.svg" },
 ];
 
 export const navLinks = [
