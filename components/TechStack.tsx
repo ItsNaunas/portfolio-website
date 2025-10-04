@@ -20,35 +20,29 @@ export default function TechStack() {
         >
           <h2 className="headline-sm text-white">TECH STACK</h2>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
             {tech.map((item, idx) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="group"
+                className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 hover:border-signal/30 transition-colors"
               >
-                {/* Orange background with black SVG on top */}
-                <div className="bg-signal p-4 rounded-lg transition-all duration-300 hover:bg-signal/90 hover:scale-105 hover:shadow-lg">
-                  <div className="flex flex-col items-center space-y-2">
-                    {/* SVG Icon */}
-                    <div className="w-8 h-8 flex items-center justify-center">
-                      <Image
-                        src={item.icon}
-                        alt={item.name}
-                        width={32}
-                        height={32}
-                        className="w-full h-full object-contain filter brightness-0"
-                      />
-                    </div>
-                    
-                    {/* Tech name */}
-                    <span className="text-ink font-body text-xs font-medium">
-                      {item.name}
-                    </span>
-                  </div>
+                {/* Small icon box */}
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={24}
+                    height={24}
+                        className="w-full h-full object-contain"
+                        style={{
+                          filter: 'brightness(0) saturate(100%) invert(46%) sepia(96%) saturate(2165%) hue-rotate(346deg) brightness(101%) contrast(97%)'
+                        }}
+                  />
                 </div>
+                <span className="text-white/80 font-body text-sm">{item.name}</span>
               </motion.div>
             ))}
           </div>
