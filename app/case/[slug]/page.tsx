@@ -42,9 +42,17 @@ export default function CasePage({ params }: { params: { slug: string } }) {
 
             {/* Hero image */}
             <div className="aspect-video bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-signal/10 to-transparent flex items-center justify-center">
-                <p className="text-white/30 font-body text-sm">Screenshot placeholder</p>
-              </div>
+              {caseStudy.slug === "alira" ? (
+                <img
+                  src="/case-study-mockups/case study 2/alira-case2.png"
+                  alt={caseStudy.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-signal/10 to-transparent flex items-center justify-center">
+                  <p className="text-white/30 font-body text-sm">Screenshot placeholder</p>
+                </div>
+              )}
             </div>
 
             {/* Content */}
