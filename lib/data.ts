@@ -21,7 +21,7 @@ export const caseStudies = [
   {
     slug: "e-ctrl",
     title: "E-CTRL",
-    image: "/screenshots/e-ctrl-home.jpg",
+    image: "/case-study-mockups/case study 1/e-ctrl-case1.png",
     problem: "Site wasn't converting.",
     solution: "Redesigned hero, proof band, short form.",
     result: "+42% booked calls",

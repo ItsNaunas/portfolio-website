@@ -26,11 +26,20 @@ export default function CaseGrid() {
                 <div className="bg-white/5 border border-white/10 p-6 space-y-6 transition-all duration-300 hover:border-signal/30">
                   {/* Device frame */}
                   <div className="aspect-video bg-ink border border-white/10 rounded overflow-hidden relative">
-                    {/* TODO: Replace with actual screenshot */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
-                    <div className="absolute top-4 left-4 px-4 py-2 bg-signal text-ink text-xs font-display">
-                      {study.title}
-                    </div>
+                    {study.image ? (
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
+                        <div className="absolute top-4 left-4 px-4 py-2 bg-signal text-ink text-xs font-display">
+                          {study.title}
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -83,11 +92,20 @@ export default function CaseGrid() {
                 <div className="bg-white/5 border border-white/10 p-6 space-y-6 transition-all duration-300 hover:border-signal/30">
                   {/* Device frame */}
                   <div className="aspect-video bg-ink border border-white/10 rounded overflow-hidden relative">
-                    {/* TODO: Replace with actual screenshot */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
-                    <div className="absolute top-4 left-4 px-4 py-2 bg-signal text-ink text-xs font-display">
-                      {study.title}
-                    </div>
+                    {study.image ? (
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
+                        <div className="absolute top-4 left-4 px-4 py-2 bg-signal text-ink text-xs font-display">
+                          {study.title}
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* Content */}
