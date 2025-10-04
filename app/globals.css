@@ -29,12 +29,17 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #0C0C0C;
   color: white;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Custom utility classes */
@@ -57,6 +62,11 @@ body {
 
   .section-container {
     @apply max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24;
+  }
+
+  /* Prevent horizontal overflow */
+  section {
+    @apply overflow-x-hidden;
   }
 
   .headline-xl {
