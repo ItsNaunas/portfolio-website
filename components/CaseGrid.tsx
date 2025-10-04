@@ -30,7 +30,7 @@ export default function CaseGrid() {
                       <img
                         src={study.image}
                         alt={study.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <>
@@ -96,7 +96,7 @@ export default function CaseGrid() {
                       <img
                         src={study.image}
                         alt={study.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                       <>
