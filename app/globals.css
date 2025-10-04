@@ -70,7 +70,7 @@ body {
   }
 
   .headline-xl {
-    @apply font-display text-[clamp(4rem,12vw,10rem)] leading-[0.9] uppercase tracking-tight;
+    @apply font-display text-[clamp(3rem,12vw,10rem)] leading-[0.9] uppercase tracking-tight;
   }
 
   .headline-lg {

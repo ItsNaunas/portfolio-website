@@ -1,7 +1,7 @@
 export const rotatingStats = [
-  { text: "+82% LEADS" },
-  { text: "7-DAY DELIVERY" },
-  { text: "25+ PROJECTS" },
+  { line1: "+82%", line2: "LEADS" },
+  { line1: "7-DAY", line2: "DELIVERY" },
+  { line1: "25+", line2: "PROJECTS" },
 ];
 
 export const marqueeLogos = [

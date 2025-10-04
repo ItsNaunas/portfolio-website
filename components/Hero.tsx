@@ -37,7 +37,7 @@ export default function Hero() {
   }, [reduce, totalIntro]);
 
   return (
-    <section className="relative min-h-screen bg-ink flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen bg-ink flex items-center pt-16 md:pt-20 overflow-hidden">
       <div className="section-container w-full">
         {/* 
           One tree rendered the whole time. We change the LAYOUT of wrappers
@@ -54,13 +54,13 @@ export default function Hero() {
               : "space-y-12"
           }
         >
-          {/* ROW 1 — BY/NAUNAS + CONSULTANT (appears last in intro, sits first in final) */}
-          <motion.div 
-            layout 
+          {/* Mobile-only header with BY NAUNAS (left) and rotating stat (right) */}
+          <motion.div
+            layout
             transition={{ duration: tMorph, ease }}
-            className={phase === "final" ? "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8" : ""}
+            className={phase === "final" ? "md:hidden flex justify-between items-start mb-4" : "hidden"}
           >
-            {/* LEFT RAIL (BY / NAUNAS) — hidden in intro, slides in in final */}
+            {/* BY NAUNAS - left side */}
             <motion.div
               initial={reduce ? { opacity: 1, x: 0 } : { opacity: 0, x: -36 }}
               animate={
@@ -68,7 +68,41 @@ export default function Hero() {
                   ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.10 } }
                   : { opacity: 0, x: -36 }
               }
-              className={phase === "final" ? "text-signal font-body text-lg tracking-[0.2em] uppercase space-y-2" : "hidden"}
+              className="text-signal font-body text-lg tracking-[0.2em] uppercase space-y-2 text-center"
+            >
+              <div>BY</div>
+              <div>NAUNAS</div>
+            </motion.div>
+
+            {/* Rotating stat - right side */}
+            <motion.div
+              initial={reduce ? { opacity: 1, x: 0 } : { opacity: 0, x: 36 }}
+              animate={
+                phase === "final"
+                  ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.18 } }
+                  : { opacity: 0, x: 36 }
+              }
+              className="text-signal font-body text-lg tracking-[0.2em] uppercase min-w-[140px] text-right"
+            >
+              <RotatingStat />
+            </motion.div>
+          </motion.div>
+
+          {/* ROW 1 — BY/NAUNAS + CONSULTANT (appears last in intro, sits first in final) */}
+          <motion.div 
+            layout 
+            transition={{ duration: tMorph, ease }}
+            className={phase === "final" ? "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8" : ""}
+          >
+            {/* LEFT RAIL (BY / NAUNAS) — hidden on mobile, visible on desktop */}
+            <motion.div
+              initial={reduce ? { opacity: 1, x: 0 } : { opacity: 0, x: -36 }}
+              animate={
+                phase === "final"
+                  ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.10 } }
+                  : { opacity: 0, x: -36 }
+              }
+              className={phase === "final" ? "hidden md:block text-signal font-body text-lg tracking-[0.2em] uppercase space-y-2" : "hidden"}
             >
               <div>BY</div>
               <div>NAUNAS</div>
@@ -97,7 +131,7 @@ export default function Hero() {
                 sWord={sWord}
               />
 
-              {/* STAT pill — only visible/animated in final */}
+              {/* STAT pill — only visible/animated in final (desktop only) */}
               <motion.div
                 initial={reduce ? { opacity: 1, x: 0 } : { opacity: 0, x: 36 }}
                 animate={
@@ -105,7 +139,7 @@ export default function Hero() {
                     ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.18 } }
                     : { opacity: 0, x: 36 }
                 }
-                className={phase === "final" ? "bg-signal text-ink px-12 py-10 min-w-[400px] h-[120px] flex items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
+                className={phase === "final" ? "hidden md:flex bg-signal text-ink px-12 py-10 min-w-[400px] h-[120px] items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
               >
                 <RotatingStat />
               </motion.div>
@@ -117,6 +151,7 @@ export default function Hero() {
               transition={{ duration: tMorph, ease }}
               className={phase === "intro" ? "" : "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"}
             >
+              {/* Desktop: JOIN appears on left */}
               <motion.div
                 initial={reduce ? { opacity: 1, x: 0 } : { opacity: 0, x: -28 }}
                 animate={
@@ -124,7 +159,7 @@ export default function Hero() {
                     ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.24 } }
                     : { opacity: 0, x: -28 }
                 }
-                className={phase === "final" ? "" : "hidden"}
+                className={phase === "final" ? "hidden md:block" : "hidden"}
               >
                 <Link
                   href="#join"
@@ -141,6 +176,26 @@ export default function Hero() {
                 tWord={tWord}
                 sWord={sWord}
               />
+            </motion.div>
+
+            {/* Mobile: CTA appears after COACHES */}
+            <motion.div
+              layout
+              transition={{ duration: tMorph, ease }}
+              initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+              animate={
+                phase === "final"
+                  ? { opacity: 1, y: 0, transition: { duration: tRails, ease, delay: 0.32 } }
+                  : { opacity: 0, y: 28 }
+              }
+              className={phase === "final" ? "md:hidden mt-8" : "hidden"}
+            >
+              <Link
+                href="#join"
+                className="btn inline-block w-full max-w-[400px] h-[80px] flex items-center justify-center text-xl font-bold mx-auto"
+              >
+                JOIN
+              </Link>
             </motion.div>
           </motion.div>
         </div>
