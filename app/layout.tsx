@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   keywords: ["conversion optimization", "web design", "CRO", "AI automation", "marketing"],
   icons: {
     icon: [
-      { url: "/logos/favicon.png", sizes: "any" },
+      { url: "/logos/logo.png", sizes: "any" },
     ],
-    shortcut: "/logos/favicon.png",
-    apple: "/logos/favicon.png",
+    shortcut: "/logos/logo.png",
+    apple: "/logos/logo.png",
   },
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${archivoBlack.variable}`}>
       <head>
-        <link rel="icon" href="/logos/favicon.png" type="image/png" />
+        <link rel="icon" href="/logos/logo.png" type="image/png" />
       </head>
       <body className="font-body antialiased">
         {children}
