@@ -27,9 +27,9 @@ export const caseStudies = [
     result: "+42% booked calls",
   },
   {
-    slug: "fitness-coach",
-    title: "FIT COACH PRO",
-    image: "/screenshots/fitness-coach.jpg",
+    slug: "alira",
+    title: "ALIRA",
+    image: "/case-study-mockups/case study 2/alira-case1.png",
     problem: "High traffic, low conversions.",
     solution: "Built urgency-driven funnel with social proof.",
     result: "+67% sign-ups",
