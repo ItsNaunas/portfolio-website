@@ -43,9 +43,9 @@ export const caseStudies = [
     result: "+58% demo bookings",
   },
   {
-    slug: "consulting-firm",
-    title: "CONSULTING FIRM",
-    image: "/screenshots/consulting-firm.jpg",
+    slug: "naunas",
+    title: "NAUNAS",
+    image: "/case-study-mockups/case study 4/naunas-case1.png",
     problem: "Professional but boring site.",
     solution: "Modern redesign with case study highlights.",
     result: "+91% qualified leads",
