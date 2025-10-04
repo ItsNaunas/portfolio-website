@@ -46,7 +46,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                 <img
                   src="/case-study-mockups/case study 2/alira-case2.png"
                   alt={caseStudy.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-signal/10 to-transparent flex items-center justify-center">
