@@ -27,13 +27,11 @@ export default function CaseGrid() {
                   {/* Device frame */}
                   <div className="aspect-video bg-ink border border-white/10 rounded overflow-hidden relative">
                     {study.image ? (
-                      <div className="w-full h-full relative" style={{ backgroundColor: '#F2613F' }}>
-                        <img
-                          src={study.image}
-                          alt={study.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-contain"
+                      />
                     ) : (
                       <>
                         <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
@@ -95,13 +93,11 @@ export default function CaseGrid() {
                   {/* Device frame */}
                   <div className="aspect-video bg-ink border border-white/10 rounded overflow-hidden relative">
                     {study.image ? (
-                      <div className="w-full h-full relative" style={{ backgroundColor: '#F2613F' }}>
-                        <img
-                          src={study.image}
-                          alt={study.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-contain"
+                      />
                     ) : (
                       <>
                         <div className="absolute inset-0 bg-gradient-to-br from-signal/10 to-transparent" />
