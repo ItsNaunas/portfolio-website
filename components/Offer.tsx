@@ -110,12 +110,20 @@ export default function Offer() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-[#121212] border border-white/10 rounded-lg overflow-hidden"
             >
-              <div className="aspect-video bg-ink relative flex items-center justify-center">
-                {/* Orange Play Button */}
-                <div className="w-16 h-16 bg-signal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-ink ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+              <div className="aspect-video bg-ink relative flex items-center justify-center overflow-hidden">
+                {/* E-CTRL Case Study Image */}
+                <img
+                  src="/case-study-mockups/case study 1/e-ctrl-case2.png"
+                  alt="E-CTRL Case Study"
+                  className="w-full h-full object-contain"
+                />
+                {/* Orange Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-signal rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg">
+                    <svg className="w-6 h-6 text-ink ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
                 </div>
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-signal/5 to-transparent" />
