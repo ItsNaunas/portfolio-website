@@ -30,7 +30,7 @@ export default function CaseGrid() {
                        <img
                          src={study.image}
                          alt={study.title}
-                         className={`w-full h-full object-contain ${study.slug === 'e-ctrl' ? 'scale-110' : ''}`}
+                          className={`w-full h-full object-contain ${study.slug === 'e-ctrl' ? 'scale-110' : ''} ${study.slug === 'hijama' ? 'scale-150 translate-x-24' : ''}`}
                        />
                      ) : (
                       <>
@@ -96,7 +96,7 @@ export default function CaseGrid() {
                        <img
                          src={study.image}
                          alt={study.title}
-                         className={`w-full h-full object-contain ${study.slug === 'e-ctrl' ? 'scale-110' : ''}`}
+                          className={`w-full h-full object-contain ${study.slug === 'e-ctrl' ? 'scale-110' : ''} ${study.slug === 'hijama' ? 'scale-150 translate-x-24' : ''}`}
                        />
                      ) : (
                       <>

@@ -35,9 +35,9 @@ export const caseStudies = [
     result: "+67% sign-ups",
   },
   {
-    slug: "saas-startup",
-    title: "SAAS STARTUP",
-    image: "/screenshots/saas-startup.jpg",
+    slug: "hijama",
+    title: "HIJAMA",
+    image: "/case-study-mockups/case study 3/hijama-case1.png",
     problem: "Confusing value proposition.",
     solution: "Simplified messaging, added demo CTA.",
     result: "+58% demo bookings",
