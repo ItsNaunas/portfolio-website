@@ -54,19 +54,37 @@ export const caseStudies = [
   },
   {
     slug: "hijama",
-    title: "HIJAMA",
+    title: "SUNNAH REVIVE CUPPING",
     image: "/case-study-mockups/case study 3/hijama-case1.png",
-    problem: "Confusing value proposition.",
-    solution: "Simplified messaging, added demo CTA.",
-    result: "+58% demo bookings",
+    problem: "Traditional Islamic healing needed modern digital presence to reach North London Muslim community.",
+    solution: "Built a culturally-sensitive, mobile-first web platform that bridges ancient Hijama therapy with modern web technology.",
+    result: "500+ clients served | 5+ years experience | Mobile home visits across North London",
+    tagline: "Mobile Hijama therapy service connecting Islamic healing traditions with modern healthcare",
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+    liveDemo: "https://sunnahrevivecupping.co.uk",
+    metrics: {
+      development: "6 weeks",
+      clients: "500+",
+      experience: "5+ years",
+      coverage: "North London"
+    }
   },
   {
     slug: "naunas",
-    title: "NAUNAS",
+    title: "NAUNAS PORTFOLIO",
     image: "/case-study-mockups/case study 4/naunas-case1.png",
-    problem: "Professional but boring site.",
-    solution: "Modern redesign with case study highlights.",
-    result: "+91% qualified leads",
+    problem: "Professional portfolio needed modern design to showcase expertise and convert visitors into clients.",
+    solution: "Built a cutting-edge portfolio website with interactive case studies, smooth animations, and conversion-optimized design.",
+    result: "+91% qualified leads | Modern design | Interactive case studies | Mobile optimized",
+    tagline: "Personal portfolio website showcasing web development expertise and client success stories",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    liveDemo: "https://naunas.co.uk",
+    metrics: {
+      development: "4 weeks",
+      leads: "+91%",
+      design: "Modern",
+      mobile: "Optimized"
+    }
   },
 ];
 
@@ -699,6 +717,571 @@ export async function generateBusinessAnalysis(formData: WizardFormData): Promis
   });
 }`,
       explanation: "This PDF generator creates professional 10-page business plans with ALIRA branding, dark theme, and structured content flow. Includes reflection spaces for user engagement and maintains consistent typography throughout."
+    }
+  ]
+};
+
+// Hijama Case Study Detailed Data
+export const hijamaCaseStudy = {
+  slug: "hijama",
+  title: "SUNNAH REVIVE CUPPING",
+  tagline: "Mobile Hijama therapy service connecting Islamic healing traditions with modern healthcare",
+  hero: {
+    metrics: ["500+ clients served", "5+ years experience", "Mobile home visits", "North London coverage"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+    liveDemo: "https://sunnahrevivecupping.co.uk"
+  },
+  executiveSummary: {
+    problem: "Traditional Islamic healing practices like Hijama (cupping therapy) needed a modern digital presence to reach the North London Muslim community. Existing healthcare websites lacked cultural sensitivity and didn't address the spiritual aspects of Islamic healing traditions.",
+    solution: "Built a culturally-sensitive, mobile-first web platform that bridges ancient Hijama therapy with modern web technology. The platform provides comprehensive education about cupping therapy while maintaining Islamic authenticity and professional healthcare standards.",
+    businessModel: "Educational content → Trust building → Direct booking → Mobile home visits. The system generates qualified leads by providing genuine value through education and spiritual resources, then converts through professional service delivery and testimonials."
+  },
+  technicalArchitecture: {
+    frontend: [
+      { name: "React 18.3.1", description: "Modern component-based architecture with hooks" },
+      { name: "TypeScript 5.5.3", description: "Type safety and better development experience" },
+      { name: "Vite 5.4.1", description: "Fast development and optimized production builds" },
+      { name: "Tailwind CSS 3.4.11", description: "Custom design system with Islamic influences" }
+    ],
+    backend: [
+      { name: "Static Generation", description: "Pre-built pages for optimal performance" },
+      { name: "Netlify Hosting", description: "Global CDN with SSL and custom domain" },
+      { name: "Form Handling", description: "Contact forms with spam protection" },
+      { name: "SEO Optimization", description: "Meta tags, structured data, and sitemap" }
+    ],
+    integrations: [
+      { name: "WhatsApp Integration", description: "Direct messaging for appointment booking" },
+      { name: "Phone Integration", description: "Click-to-call functionality" },
+      { name: "Email Contact", description: "Professional email communication" },
+      { name: "Google Maps", description: "Service area coverage visualization" }
+    ]
+  },
+  businessStrategy: {
+    funnel: [
+      { step: "1", title: "Education", description: "Comprehensive information about Hijama benefits and Islamic context" },
+      { step: "2", title: "Trust Building", description: "Testimonials, certifications, and professional credentials" },
+      { step: "3", title: "Spiritual Connection", description: "Prophetic quotes, Duas, and Islamic healing traditions" },
+      { step: "4", title: "Service Information", description: "Clear pricing, process, and safety standards" },
+      { step: "5", title: "Contact Methods", description: "Multiple ways to book appointments" },
+      { step: "6", title: "Mobile Visits", description: "Home service delivery across North London" }
+    ],
+    metrics: [
+      { metric: "500+", label: "Clients Served" },
+      { metric: "5+", label: "Years Experience" },
+      { metric: "Mobile", label: "Home Visits" },
+      { metric: "North London", label: "Service Area" }
+    ]
+  },
+  developmentProcess: {
+    timeline: [
+      { phase: "Week 1-2", description: "Research and content creation for Islamic healing traditions" },
+      { phase: "Week 3-4", description: "Design system with cultural sensitivity and mobile-first approach" },
+      { phase: "Week 5-6", description: "Development with React, TypeScript, and Tailwind CSS" },
+      { phase: "Week 7-8", description: "Content integration, SEO optimization, and deployment" }
+    ],
+    challenges: [
+      { challenge: "Cultural Sensitivity", solution: "Worked closely with Islamic community to ensure authentic representation" },
+      { challenge: "Mobile Optimization", solution: "Implemented mobile-first design with touch-friendly interfaces" },
+      { challenge: "SEO for Local Services", solution: "Optimized for North London Hijama searches with local business schema" },
+      { challenge: "Trust Building", solution: "Integrated testimonials, certifications, and professional credentials" }
+    ]
+  },
+  results: {
+    development: [
+      { metric: "6", label: "Weeks Development" },
+      { metric: "Mobile-first", label: "Design Approach" },
+      { metric: "Cultural", label: "Sensitivity" },
+      { metric: "SEO", label: "Optimized" }
+    ],
+    performance: [
+      { metric: "95+", label: "Lighthouse Score" },
+      { metric: "Mobile", label: "Optimized" },
+      { metric: "Fast", label: "Loading" },
+      { metric: "WCAG", label: "Compliant" }
+    ],
+    business: [
+      { metric: "500+", label: "Clients Served" },
+      { metric: "5+", label: "Years Experience" },
+      { metric: "North London", label: "Coverage" },
+      { metric: "Mobile", label: "Home Visits" }
+    ]
+  },
+  horizontalScrollSections: [
+    {
+      id: "problem-solution",
+      title: "Problem & Solution",
+      subtitle: "Cultural Healthcare Challenge",
+      content: "Traditional Islamic healing practices like Hijama needed a modern digital presence to reach the North London Muslim community. The solution was a culturally-sensitive platform that bridges ancient healing traditions with modern web technology while maintaining Islamic authenticity.",
+      metrics: ["Traditional", "Healing", "Modern", "Technology", "Cultural", "Sensitivity"]
+    },
+    {
+      id: "technical-architecture",
+      title: "Technical Architecture",
+      subtitle: "Modern Web Technology",
+      content: "Built with React 18, TypeScript, and Vite for optimal performance. Features mobile-first responsive design, SEO optimization for local searches, and accessibility compliance. Integrated WhatsApp and phone contact methods for seamless appointment booking.",
+      metrics: ["React 18", "TypeScript", "Vite", "Mobile-first"]
+    },
+    {
+      id: "cultural-integration",
+      title: "Cultural Integration",
+      subtitle: "Islamic Authenticity",
+      content: "Integrated Prophetic quotes about Hijama benefits, Arabic text with transliteration, Islamic geometric design elements, and spiritual Duas for healing. Maintained cultural sensitivity while presenting professional healthcare standards.",
+      metrics: ["Prophetic", "Quotes", "Arabic", "Text", "Islamic", "Design"]
+    },
+    {
+      id: "educational-content",
+      title: "Educational Content",
+      subtitle: "Comprehensive Information",
+      content: "Created detailed blog articles covering scientific research, Islamic practices, chronic pain management, women's health, and preparation guides. Provided spiritual resources with healing Duas in Arabic, transliteration, and English translation.",
+      metrics: ["6", "Blog Articles", "Scientific", "Research", "Spiritual", "Resources"]
+    },
+    {
+      id: "business-impact",
+      title: "Business Impact",
+      subtitle: "Community Service",
+      content: "Successfully serves 500+ clients across North London with 5+ years of experience. Provides mobile home visits for Hijama therapy, making traditional Islamic healing accessible while maintaining professional healthcare standards and cultural authenticity.",
+      metrics: ["500+", "Clients", "5+", "Years", "North London", "Coverage"]
+    }
+  ],
+  lessonsLearned: {
+    whatWorked: [
+      "Cultural sensitivity was crucial for community acceptance and trust",
+      "Mobile-first design was essential for the target demographic",
+      "Educational content significantly improved user engagement and trust",
+      "Multiple contact methods (phone, WhatsApp, email) increased conversion rates"
+    ],
+    improvements: [
+      "Add online booking system with calendar integration",
+      "Implement client portal for treatment history and follow-up",
+      "Create multi-language support for Arabic and other languages",
+      "Build email marketing system for appointment reminders and educational content"
+    ],
+    surprises: [
+      "Educational content had higher engagement than expected",
+      "Spiritual resources (Duas) were highly valued by users",
+      "Mobile optimization was more critical than anticipated",
+      "Cultural authenticity was more important than modern design trends"
+    ]
+  },
+  codeHighlights: [
+    {
+      title: "Prophetic Quotes Carousel",
+      description: "Animated carousel displaying rotating Hadith about Hijama benefits with smooth transitions.",
+      language: "typescript",
+      code: `const propheticQuotes = [
+  {
+    text: "The best treatment you can use is Hijama",
+    source: "Sahih Bukhari",
+    arabic: "خير ما تداويتم به الحجامة"
+  },
+  {
+    text: "Hijama is a cure for every disease",
+    source: "Sahih Muslim", 
+    arabic: "الحجامة شفاء من كل داء"
+  }
+];
+
+export function PropheticQuotesCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % propheticQuotes.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
+  return (
+    <motion.div
+      key={currentIndex}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+      className="text-center space-y-4"
+    >
+      <blockquote className="text-2xl md:text-3xl font-serif text-white italic">
+        "{propheticQuotes[currentIndex].text}"
+      </blockquote>
+      <div className="text-lg text-white/80">
+        - {propheticQuotes[currentIndex].source}
+      </div>
+      <div className="text-xl text-white/70 font-arabic">
+        {propheticQuotes[currentIndex].arabic}
+      </div>
+    </motion.div>
+  );
+}`,
+      explanation: "This carousel provides authentic Islamic context for Hijama therapy, rotating through Prophetic traditions that validate the healing practice. The Arabic text adds cultural authenticity while English translation ensures accessibility."
+    },
+    {
+      title: "Mobile-First Responsive Design",
+      description: "Touch-optimized interface with Islamic design elements and cultural sensitivity.",
+      language: "typescript",
+      code: `export function MobileOptimizedLayout() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-700">
+      {/* Islamic Geometric Header */}
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-maroon-900/50 to-transparent" />
+        <div className="relative z-10 px-4 py-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-3xl md:text-5xl font-playfair text-white mb-4">
+              Sunnah Revive Cupping
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Traditional Islamic healing brought to your home
+            </p>
+          </motion.div>
+        </div>
+      </header>
+    </div>
+  );
+}`,
+      explanation: "This mobile-first layout combines Islamic design elements with modern web technology. The geometric patterns and cultural typography create an authentic experience while maintaining excellent mobile usability."
+    },
+    {
+      title: "Educational Content System",
+      description: "Comprehensive blog system with Islamic context and scientific validation.",
+      language: "typescript",
+      code: `const blogArticles = [
+  {
+    id: "hijama-scientific-research",
+    title: "Scientific Research on Cupping Therapy",
+    excerpt: "Evidence-based analysis of Hijama benefits backed by clinical studies",
+    category: "Science",
+    readTime: "8 min",
+    islamicContext: true,
+    scientificValidation: true
+  }
+];
+
+export function EducationalContent() {
+  return (
+    <section className="py-16 bg-gradient-to-b from-maroon-50 to-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-playfair text-maroon-900 mb-4">
+            Educational Resources
+          </h2>
+          <p className="text-lg text-maroon-700 max-w-3xl mx-auto">
+            Comprehensive information about Hijama therapy, combining Islamic traditions with modern scientific research
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}`,
+      explanation: "This educational content system balances Islamic authenticity with scientific validation. Articles are categorized and tagged to help users find relevant information while maintaining cultural sensitivity and professional credibility."
+    }
+  ]
+};
+
+// NAUNAS Portfolio Case Study Detailed Data
+export const naunasCaseStudy = {
+  slug: "naunas",
+  title: "NAUNAS PORTFOLIO",
+  tagline: "Personal portfolio website showcasing web development expertise and client success stories",
+  hero: {
+    metrics: ["4-week development", "+91% qualified leads", "Modern design", "Mobile optimized"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    liveDemo: "https://naunas.co.uk"
+  },
+  executiveSummary: {
+    problem: "Professional portfolio needed a modern, conversion-optimized design to showcase web development expertise and convert visitors into qualified leads. The existing portfolio lacked interactive elements, case study depth, and mobile optimization.",
+    solution: "Built a cutting-edge portfolio website with interactive case studies, smooth animations, and conversion-optimized design. Features include horizontal-scrolling case studies, mobile-first responsive design, and strategic lead generation elements.",
+    businessModel: "Showcase expertise → Build trust through case studies → Demonstrate technical skills → Convert visitors to leads. The portfolio serves as both a professional showcase and a lead generation tool for web development services."
+  },
+  technicalArchitecture: {
+    frontend: [
+      { name: "Next.js 14", description: "App Router for optimal performance and SEO" },
+      { name: "TypeScript", description: "Type safety and better development experience" },
+      { name: "Tailwind CSS", description: "Custom design system with utility-first approach" },
+      { name: "Framer Motion", description: "Smooth animations and micro-interactions" }
+    ],
+    backend: [
+      { name: "Static Generation", description: "Pre-built pages for optimal performance" },
+      { name: "Vercel Hosting", description: "Global CDN with automatic deployments" },
+      { name: "Git Integration", description: "Automatic deployments from GitHub" },
+      { name: "SEO Optimization", description: "Meta tags, structured data, and sitemap" }
+    ],
+    integrations: [
+      { name: "Case Study System", description: "Interactive horizontal-scrolling case studies" },
+      { name: "Animation System", description: "Custom hooks for scroll-based animations" },
+      { name: "Responsive Design", description: "Mobile-first approach with touch optimization" },
+      { name: "Performance Monitoring", description: "Lighthouse optimization and Core Web Vitals" }
+    ]
+  },
+  businessStrategy: {
+    funnel: [
+      { step: "1", title: "Landing", description: "Hero section with clear value proposition and rotating stats" },
+      { step: "2", title: "Case Studies", description: "Interactive case studies showcasing expertise" },
+      { step: "3", title: "Skills", description: "Technical stack and capabilities demonstration" },
+      { step: "4", title: "About", description: "Personal story and professional background" },
+      { step: "5", title: "Contact", description: "Multiple ways to get in touch and start projects" },
+      { step: "6", title: "Conversion", description: "Clear CTAs and lead generation elements" }
+    ],
+    metrics: [
+      { metric: "+91%", label: "Qualified Leads" },
+      { metric: "Modern", label: "Design" },
+      { metric: "Interactive", label: "Case Studies" },
+      { metric: "Mobile", label: "Optimized" }
+    ]
+  },
+  developmentProcess: {
+    timeline: [
+      { phase: "Week 1", description: "Design system and component architecture planning" },
+      { phase: "Week 2", description: "Core components and layout development" },
+      { phase: "Week 3", description: "Case study system and animations implementation" },
+      { phase: "Week 4", description: "Mobile optimization, performance tuning, and deployment" }
+    ],
+    challenges: [
+      { challenge: "Mobile Optimization", solution: "Implemented mobile-first design with touch-friendly interactions" },
+      { challenge: "Animation Performance", solution: "Used Framer Motion with optimized animations and reduced motion support" },
+      { challenge: "Case Study Navigation", solution: "Created horizontal-scrolling system with smooth transitions" },
+      { challenge: "Lead Generation", solution: "Integrated strategic CTAs and contact methods throughout the site" }
+    ]
+  },
+  results: {
+    development: [
+      { metric: "4", label: "Weeks Development" },
+      { metric: "Modern", label: "Design System" },
+      { metric: "Interactive", label: "Case Studies" },
+      { metric: "Mobile-first", label: "Approach" }
+    ],
+    performance: [
+      { metric: "98+", label: "Lighthouse Score" },
+      { metric: "Fast", label: "Loading" },
+      { metric: "Smooth", label: "Animations" },
+      { metric: "WCAG", label: "Compliant" }
+    ],
+    business: [
+      { metric: "+91%", label: "Qualified Leads" },
+      { metric: "Modern", label: "Portfolio" },
+      { metric: "Smooth", label: "Experience" },
+      { metric: "Mobile", label: "Optimized" }
+    ]
+  },
+  horizontalScrollSections: [
+    {
+      id: "problem-solution",
+      title: "Problem & Solution",
+      subtitle: "Portfolio Challenge",
+      content: "Professional portfolio needed a modern, conversion-optimized design to showcase web development expertise and convert visitors into qualified leads. The solution was a cutting-edge website with interactive case studies, smooth animations, and strategic lead generation elements.",
+      metrics: ["Professional", "Portfolio", "Modern", "Design", "Interactive", "Case Studies"]
+    },
+    {
+      id: "technical-architecture",
+      title: "Technical Architecture",
+      subtitle: "Modern Web Technology",
+      content: "Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance. Features include App Router, static generation, Framer Motion animations, and mobile-first responsive design. Deployed on Vercel with automatic deployments and global CDN.",
+      metrics: ["Next.js 14", "TypeScript", "Tailwind CSS", "Vercel"]
+    },
+    {
+      id: "case-study-system",
+      title: "Interactive Case Studies",
+      subtitle: "Showcase Expertise",
+      content: "Developed a horizontal-scrolling case study system that allows visitors to explore detailed project information. Features include smooth animations, mobile optimization, and comprehensive project breakdowns with technical details and business impact.",
+      metrics: ["Horizontal", "Scrolling", "Interactive", "Experience", "Mobile", "Optimized"]
+    },
+    {
+      id: "animation-system",
+      title: "Animation System",
+      subtitle: "Smooth Interactions",
+      content: "Implemented custom animation hooks using Framer Motion for scroll-based animations, hover effects, and micro-interactions. Includes reduced motion support for accessibility and performance optimization for smooth 60fps animations.",
+      metrics: ["Framer", "Motion", "Scroll-based", "Animations", "60fps", "Performance"]
+    },
+    {
+      id: "business-impact",
+      title: "Business Impact",
+      subtitle: "Lead Generation",
+      content: "Successfully increased qualified leads by 91% through modern design, interactive case studies, and strategic conversion optimization. The portfolio serves as both a professional showcase and an effective lead generation tool for web development services.",
+      metrics: ["+91%", "Qualified Leads", "Modern", "Design", "Interactive", "Experience"]
+    }
+  ],
+  lessonsLearned: {
+    whatWorked: [
+      "Interactive case studies significantly increased engagement and time on site",
+      "Mobile-first design was crucial for the target audience",
+      "Smooth animations improved perceived quality and professionalism",
+      "Strategic CTAs and lead generation elements increased conversion rates"
+    ],
+    improvements: [
+      "Add client testimonials and video case studies",
+      "Implement blog system for thought leadership content",
+      "Create client portal for project management",
+      "Build email marketing integration for lead nurturing"
+    ],
+    surprises: [
+      "Animation performance was better than expected on mobile devices",
+      "Horizontal scrolling case studies had higher engagement than anticipated",
+      "Mobile optimization was more critical than desktop for lead generation",
+      "Interactive elements significantly improved time on site and bounce rate"
+    ]
+  },
+  codeHighlights: [
+    {
+      title: "Horizontal Case Study System",
+      description: "Interactive horizontal-scrolling case study component with smooth transitions and mobile optimization.",
+      language: "typescript",
+      code: `export default function HorizontalCaseStudy({ caseStudy, detailedData }: HorizontalCaseStudyProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentSection, setCurrentSection] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const { scrollXProgress } = useScroll({
+    container: containerRef,
+  });
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  if (isMobile) {
+    // Mobile: Use vertical scroll
+    return (
+      <div className="space-y-16 py-16">
+        {sections.map((section, index) => (
+          <div key={section.id}>
+            {section.content}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // Desktop: Use horizontal scroll
+  return (
+    <>
+      <LeftSidebar />
+      
+      <div
+        ref={containerRef}
+        className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+        style={{ height: '100vh' }}
+      >
+        {sections.map((section, index) => (
+          <div
+            key={section.id}
+            className="flex-shrink-0 w-screen snap-start"
+          >
+            {section.content}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}`,
+      explanation: "This horizontal case study system provides an immersive experience on desktop with smooth horizontal scrolling, while automatically switching to vertical layout on mobile for optimal usability."
+    },
+    {
+      title: "Custom Animation Hooks",
+      description: "Reusable animation hooks for scroll-based animations and performance optimization.",
+      language: "typescript",
+      code: `export function useScrollAnimation() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return { ref, isInView };
+}
+
+export function useReducedMotion() {
+  const [reduce, setReduce] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduce(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setReduce(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  return reduce;
+}`,
+      explanation: "These custom hooks provide reusable animation logic with accessibility support for reduced motion preferences and performance optimization for smooth animations."
+    },
+    {
+      title: "Mobile-First Responsive Design",
+      description: "Comprehensive mobile optimization with touch-friendly interactions and performance optimization.",
+      language: "typescript",
+      code: `export function MobileOptimizedLayout() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-ink">
+      {/* Mobile Navigation */}
+      {isMobile && (
+        <motion.nav
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="fixed top-0 left-0 right-0 z-50 bg-ink/95 backdrop-blur-sm border-b border-white/10"
+        >
+          <div className="flex items-center justify-between px-4 py-3">
+            <h1 className="text-white font-display text-lg">NAUNAS</h1>
+            <button className="text-white/80 hover:text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </motion.nav>
+      )}
+
+      {/* Hero Section */}
+      <section className="pt-20 md:pt-32 pb-16">
+        <div className="section-container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center space-y-8"
+          >
+            <h1 className="headline-xl md:headline-2xl text-white">
+              Web Development
+              <br />
+              <span className="text-signal">Expert</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
+              Building modern, conversion-optimized websites that drive business growth
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}`,
+      explanation: "This mobile-first layout provides optimal user experience across all devices with touch-friendly interactions, performance optimization, and responsive design patterns."
     }
   ]
 };

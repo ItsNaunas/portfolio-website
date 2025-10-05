@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HorizontalCaseStudy from "@/components/HorizontalCaseStudy";
-import { caseStudies, eCtrlCaseStudy, aliraCaseStudy } from "@/lib/data";
+import { caseStudies, eCtrlCaseStudy, aliraCaseStudy, hijamaCaseStudy, naunasCaseStudy } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
@@ -21,7 +21,9 @@ export default function CasePage({ params }: { params: { slug: string } }) {
   // Check if this is a case study with enhanced content
   const isECtrl = caseStudy.slug === "e-ctrl";
   const isAlira = caseStudy.slug === "alira";
-  const detailedData = isECtrl ? eCtrlCaseStudy : isAlira ? aliraCaseStudy : null;
+  const isHijama = caseStudy.slug === "hijama";
+  const isNaunas = caseStudy.slug === "naunas";
+  const detailedData = isECtrl ? eCtrlCaseStudy : isAlira ? aliraCaseStudy : isHijama ? hijamaCaseStudy : isNaunas ? naunasCaseStudy : null;
 
   return (
     <>
@@ -51,7 +53,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
         </div>
 
         {/* Horizontal Case Study Content */}
-        {(isECtrl || isAlira) && detailedData ? (
+        {(isECtrl || isAlira || isHijama || isNaunas) && detailedData ? (
           <HorizontalCaseStudy caseStudy={caseStudy} detailedData={detailedData} />
         ) : (
           // Fallback for other case studies (standard vertical layout)
