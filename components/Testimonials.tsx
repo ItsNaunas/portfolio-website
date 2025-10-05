@@ -107,33 +107,33 @@ function TestimonialCard({ description, name, role, company }: TestimonialCardPr
 // Testimonials data
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO',
-    company: 'TechStart',
-    description: (
-      <p>
-        Naunas transformed our website into a lead generation machine.
-        <Highlight>Our conversion rate increased by 82% in just 7 days.</Highlight> The 
-        results speak for themselves - we&apos;re now booking 3x more qualified calls.
-      </p>
-    ),
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Marketing Director',
-    company: 'GrowthCo',
-    description: (
-      <p>
-        Working with Naunas was a game-changer for our business.
-        <Highlight>We launched our new funnel 3 weeks ahead of schedule</Highlight> and 
-        immediately saw a 67% increase in lead quality. Highly recommend!
-      </p>
-    ),
-  },
-  {
-    name: 'Emma Rodriguez',
+    name: 'Fesal',
     role: 'Founder',
-    company: 'FitnessPro',
+    company: 'E-CTRL',
+    description: (
+      <p>
+        Naunas built our AI-powered Amazon audit tool that transformed our lead generation.
+        <Highlight>We now process 100+ audits weekly with 83% email open rates.</Highlight> The 
+        technical implementation was flawless and delivered exactly what we needed.
+      </p>
+    ),
+  },
+  {
+    name: 'Shuheyb',
+    role: 'Founder',
+    company: 'ALIRA',
+    description: (
+      <p>
+        Working with Naunas was a game-changer for our consultancy.
+        <Highlight>We launched our AI business case generator 4 weeks ahead of schedule</Highlight> and 
+        immediately saw automated lead generation with 99%+ email delivery rates.
+      </p>
+    ),
+  },
+  {
+    name: 'Nassor',
+    role: 'Founder',
+    company: 'KitVault',
     description: (
       <p>
         The ROI has been incredible. <Highlight>We&apos;re generating 5x more qualified 
@@ -143,21 +143,21 @@ const testimonials = [
     ),
   },
   {
-    name: 'David Park',
-    role: 'CTO',
-    company: 'SaaSLaunch',
+    name: 'Wiqas',
+    role: 'Founder',
+    company: 'Hijama',
     description: (
       <p>
-        Naunas understood our technical requirements perfectly.
-        <Highlight>Our demo booking rate jumped from 12% to 34%</Highlight> after 
-        the optimization. The technical implementation was flawless.
+        Naunas understood our cultural requirements perfectly for our Hijama service.
+        <Highlight>Our mobile-first approach increased bookings by 91%</Highlight> and 
+        the Islamic design elements resonated perfectly with our community.
       </p>
     ),
   },
   {
-    name: 'Lisa Thompson',
-    role: 'VP Sales',
-    company: 'Enterprise Solutions',
+    name: 'Haider',
+    role: 'Co-Founder',
+    company: 'LaunchKitAI',
     description: (
       <p>
         Best investment we&apos;ve made this year. <Highlight>Sales qualified leads 
@@ -167,9 +167,82 @@ const testimonials = [
     ),
   },
   {
-    name: 'Alex Kumar',
-    role: 'Head of Growth',
-    company: 'StartupXYZ',
+    name: 'Fesal',
+    role: 'Founder',
+    company: 'E-CTRL',
+    description: (
+      <p>
+        The system Naunas built is incredibly sophisticated yet simple to use.
+        <Highlight>We&apos;re converting 3x more visitors into paying customers.</Highlight> 
+        The analytics and tracking are second to none.
+      </p>
+    ),
+  },
+  // Additional testimonials for marquee
+  {
+    name: 'Fesal',
+    role: 'Founder',
+    company: 'E-CTRL',
+    description: (
+      <p>
+        The technical implementation was flawless and delivered exactly what we needed.
+        <Highlight>Our conversion rate increased by 82% in just 7 days.</Highlight> 
+        Naunas understood our requirements perfectly.
+      </p>
+    ),
+  },
+  {
+    name: 'Shuheyb',
+    role: 'Founder',
+    company: 'ALIRA',
+    description: (
+      <p>
+        Working with Naunas was a game-changer for our consultancy.
+        <Highlight>We immediately saw automated lead generation with 99%+ email delivery rates.</Highlight> 
+        The AI integration exceeded our expectations.
+      </p>
+    ),
+  },
+  {
+    name: 'Nassor',
+    role: 'Founder',
+    company: 'KitVault',
+    description: (
+      <p>
+        The automation alone saves us 10 hours per week.
+        <Highlight>We&apos;re generating 5x more qualified leads</Highlight> since implementing 
+        Naunas&apos; system. The ROI has been incredible.
+      </p>
+    ),
+  },
+  {
+    name: 'Wiqas',
+    role: 'Founder',
+    company: 'Hijama',
+    description: (
+      <p>
+        Naunas understood our cultural requirements perfectly for our Hijama service.
+        <Highlight>Our mobile-first approach increased bookings by 91%</Highlight> and 
+        the Islamic design elements resonated perfectly with our community.
+      </p>
+    ),
+  },
+  {
+    name: 'Haider',
+    role: 'Co-Founder',
+    company: 'LaunchKitAI',
+    description: (
+      <p>
+        Best investment we&apos;ve made this year. <Highlight>Sales qualified leads 
+        increased by 156%</Highlight> and our sales cycle shortened by 40%. 
+        Naunas delivers results.
+      </p>
+    ),
+  },
+  {
+    name: 'Shuheyb',
+    role: 'Founder',
+    company: 'ALIRA',
     description: (
       <p>
         The system Naunas built is incredibly sophisticated yet simple to use.

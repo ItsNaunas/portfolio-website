@@ -88,13 +88,13 @@ export default function Offer() {
                 <div className="space-y-2">
                   {/* Quote */}
                   <p className="text-white/80 font-body text-sm md:text-base italic">
-                    &quot;Naunas transformed our website into a lead generation machine. The results speak for themselves.&quot;
+                    &quot;Naunas built our AI-powered Amazon audit tool that transformed our lead generation. We now process 100+ audits weekly with 83% email open rates.&quot;
                   </p>
                   
                   {/* Client Info */}
                   <div>
-                    <p className="text-white font-body text-sm font-medium">Sarah Johnson</p>
-                    <p className="text-white/60 font-body text-xs">CEO, TechStart</p>
+                    <p className="text-white font-body text-sm font-medium">Fesal</p>
+                    <p className="text-white/60 font-body text-xs">Founder, E-CTRL</p>
                   </div>
                 </div>
               </div>
