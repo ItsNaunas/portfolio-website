@@ -4,6 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
+
 export default function FooterCTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -26,7 +28,12 @@ export default function FooterCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="#call" className="btn text-lg px-12 py-5">
+            <Link
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn text-lg px-12 py-5"
+            >
               JOIN NOW
             </Link>
           </div>

@@ -3,6 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
+
 // Highlight component for emphasizing text
 function Highlight({ children }: { children: React.ReactNode }) {
   return (
@@ -330,8 +332,10 @@ export default function Testimonials() {
           <p className="text-white/80 font-body text-lg mb-6">
             Ready to get similar results for your business?
           </p>
-          <a 
-            href="#connect" 
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn bg-signal text-ink hover:bg-signal/90 font-bold text-lg px-8 py-4"
           >
             GET STARTED TODAY

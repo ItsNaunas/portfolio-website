@@ -10,6 +10,8 @@ const iconMap = {
   FaGithub,
 };
 
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
+
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-white/10">
@@ -86,7 +88,12 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="#call" className="btn text-lg px-12 py-5">
+              <Link
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn text-lg px-12 py-5"
+              >
                 JOIN NOW
               </Link>
             </div>

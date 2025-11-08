@@ -6,6 +6,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
+
 export default function Offer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -67,7 +69,12 @@ export default function Offer() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="pt-4"
             >
-              <Link href="#call" className="btn">
+              <Link
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
                 BOOK A CALL
               </Link>
             </motion.div>

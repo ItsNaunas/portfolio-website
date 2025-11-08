@@ -3,6 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
 import Image from "next/image";
 
 export default function HowItWorks() {
@@ -171,7 +173,12 @@ export default function HowItWorks() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-center pt-16"
           >
-            <Link href="#demo" className="btn bg-signal text-ink hover:bg-signal/90 font-bold text-lg px-12 py-4">
+            <Link
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn bg-signal text-ink hover:bg-signal/90 font-bold text-lg px-12 py-4"
+            >
               SEE IT IN ACTION
             </Link>
           </motion.div>

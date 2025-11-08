@@ -15,6 +15,7 @@ import RotatingStat from "./RotatingStat";
  */
 
 const ease = [0.16, 1, 0.3, 1]; // Even smoother cubic bezier
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -162,7 +163,9 @@ export default function Hero() {
                 className={phase === "final" ? "hidden md:block" : "hidden"}
               >
                 <Link
-                  href="#join"
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn inline-block min-w-[400px] h-[120px] flex items-center justify-center text-[clamp(20px,3.5vw,32px)] font-bold"
                 >
                   JOIN
@@ -191,7 +194,9 @@ export default function Hero() {
               className={phase === "final" ? "md:hidden mt-8" : "hidden"}
             >
               <Link
-                href="#join"
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn inline-block w-full max-w-[400px] h-[80px] flex items-center justify-center text-xl font-bold mx-auto"
               >
                 JOIN

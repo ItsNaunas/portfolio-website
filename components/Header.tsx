@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { navLinks } from "@/lib/data";
 import Link from "next/link";
 
+const CALENDLY_URL = "https://calendly.com/its-naunas/30min";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,7 +41,12 @@ export default function Header() {
               [{link.label}]
             </Link>
           ))}
-          <Link href="#call" className="btn text-xs px-6 py-2">
+          <Link
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn text-xs px-6 py-2"
+          >
             CALL ME
           </Link>
         </div>
