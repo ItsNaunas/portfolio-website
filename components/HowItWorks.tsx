@@ -13,23 +13,23 @@ export default function HowItWorks() {
 
   const steps = [
     {
-      title: "Traffic In",
-      description: "Targeted visitors are driven to the landing page from ads, social media, and email campaigns.",
+      title: "Centralized Intake",
+      description: "All traffic, forms, DMs, and inquiries enter one central intake layer. No scattered inboxes, no manual routing, no lost messages.",
       image: "/steps/step-1.png"
     },
     {
-      title: "Lead Capture", 
-      description: "A high-converting form captures names, emails, and phone numbers from visitors.",
+      title: "Lead & Client State", 
+      description: "Every lead and client has a clear status, owner, and next action. No ambiguity, no guesswork, no lost context.",
       image: "/steps/step-2.png"
     },
     {
-      title: "Follow-up Automation",
-      description: "Automated email and SMS sequences nurture leads instantly, ensuring no opportunity is missed.",
+      title: "Automation & Admin",
+      description: "Follow-ups, contracts, invoices, reminders, and onboarding are automated and connected. No manual chasing, no founder memory required.",
       image: "/steps/step-3.png"
     },
     {
-      title: "Conversion Tracking",
-      description: "Every step is tracked, showing how many clicks turn into booked calls.",
+      title: "Revenue & Operations Visibility",
+      description: "Revenue, delivery, renewals, and bottlenecks are visible in one system. No spreadsheets, no fragmented tools, no operational blind spots.",
       image: "/steps/step-4.png"
     }
   ];
@@ -51,10 +51,10 @@ export default function HowItWorks() {
             className="text-center space-y-4"
           >
             <h2 className="headline-md text-white">
-              HOW THE SYSTEM WORKS
+              WHAT CHANGES ON DAY 1
             </h2>
             <p className="text-white/70 font-body text-lg max-w-2xl mx-auto">
-              Step-by-step breakdown of the exact system I set up for clients
+              Immediate control and certainty replace manual workflows and uncertainty
             </p>
           </motion.div>
 
@@ -166,12 +166,46 @@ export default function HowItWorks() {
             ))}
           </motion.div>
 
+          {/* Headline and Supporting Block - Side by Side */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.55 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch"
+          >
+            {/* Left: Headline */}
+            <div className="flex items-center md:items-center min-h-full">
+              <h3 className="text-signal font-display headline-lg font-bold uppercase tracking-tight text-left leading-[0.95]">
+                THE ENTIRE BACKEND — NOT JUST LEAD FLOW
+              </h3>
+            </div>
+
+            {/* Right: Supporting Block */}
+            <div className="space-y-4 md:space-y-5">
+              <p className="text-white/80 font-body text-sm md:text-base leading-relaxed pl-4 md:pl-5 border-l-2 border-signal">
+                Contracts and invoices generated automatically.
+              </p>
+              <p className="text-white/80 font-body text-sm md:text-base leading-relaxed pl-4 md:pl-5 border-l-2 border-signal">
+                Forms wired directly into CRM and automations.
+              </p>
+              <p className="text-white/80 font-body text-sm md:text-base leading-relaxed pl-4 md:pl-5 border-l-2 border-signal">
+                Client onboarding and delivery tracked in one place.
+              </p>
+              <p className="text-white/80 font-body text-sm md:text-base leading-relaxed pl-4 md:pl-5 border-l-2 border-signal">
+                Renewals, follow-ups, and referrals handled by logic.
+              </p>
+              <p className="text-white/80 font-body text-sm md:text-base leading-relaxed pl-4 md:pl-5 border-l-2 border-signal">
+                One source of truth for operations and revenue.
+              </p>
+            </div>
+          </motion.div>
+
           {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center pt-16"
+            className="text-center pt-8"
           >
             <Link
               href={CALENDLY_URL}
@@ -179,7 +213,7 @@ export default function HowItWorks() {
               rel="noopener noreferrer"
               className="btn bg-signal text-ink hover:bg-signal/90 font-bold text-lg px-12 py-4"
             >
-              SEE IT IN ACTION
+              INSTALL SYSTEM
             </Link>
           </motion.div>
         </motion.div>

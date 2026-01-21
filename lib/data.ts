@@ -1,7 +1,8 @@
 export const rotatingStats = [
-  { line1: "+82%", line2: "LEADS" },
-  { line1: "7-DAY", line2: "DELIVERY" },
-  { line1: "25+", line2: "PROJECTS" },
+  { line1: "100%", line2: "UPTIME" },
+  { line1: "7-DAY", line2: "INSTALL" },
+  { line1: "25+", line2: "SYSTEMS" },
+  { line1: "5★", line2: "RATED" },
 ];
 
 export const marqueeLogos = [
@@ -12,9 +13,11 @@ export const marqueeLogos = [
 ];
 
 export const offerBullets = [
-  "CRO-focused websites",
-  "AI lead gen marketing campaign",
-  "AI automations & chatbots",
+  "Unified intake layer across all demand channels",
+  "AI-assisted qualification and revenue diagnostics",
+  "State-driven automation from acquisition to retention",
+  "Canonical CRM model — single source of truth",
+  "System health checks and optimisation loops",
 ];
 
 export const caseStudies = [
@@ -89,18 +92,18 @@ export const caseStudies = [
 ];
 
 export const mainCaseHighlight = {
-  title: "CONSULTANT AGENCIES",
-  problem: "Site wasn't converting",
-  solution: "Site wasn't converting",
-  result: "+82% LEADS",
+  title: "E-CTRL",
+  problem: "Manual Amazon audits bottlenecked at founder capacity. No qualification layer between lead capture and consultation.",
+  solution: "Installed AI-powered qualification system with dual-path routing, automated audit delivery, and CRM integration.",
+  result: "100+ WEEKLY AUDITS | 83% OPEN | 12% BOOKED",
   image: "/screenshots/main-case.jpg",
   videoThumb: "/screenshots/video-thumb.jpg",
 };
 
 export const stats = [
-  { metric: "+42%", label: "CONVERSION LIFT" },
-  { metric: "7", label: "DAY DELIVERY TIME" },
-  { metric: "25+", label: "PROJECTS COMPLETED" },
+  { primary: "NO LEADS LOST", subtext: "all demand captured automatically" },
+  { primary: "FOUNDER TIME RECLAIMED", subtext: "admin and chasing removed" },
+  { primary: "NO GUESSWORK", subtext: "pipeline and outcomes visible" },
 ];
 
 export const processSteps = [
@@ -111,14 +114,13 @@ export const processSteps = [
 ];
 
 export const tech = [
-  { name: "Next.js", icon: "/logos/tech/nextdotjs.svg" },
-  { name: "Tailwind", icon: "/logos/tech/tailwindcss.svg" },
-  { name: "Supabase", icon: "/logos/tech/supabase.svg" },
-  { name: "Vercel", icon: "/logos/tech/vercel.svg" },
-  { name: "Docker", icon: "/logos/tech/docker.svg" },
+  { name: "Airtable", icon: "/logos/tech/airtable.svg" },
+  { name: "Calendly", icon: "/logos/tech/calendly.svg" },
+  { name: "Gmail", icon: "/logos/tech/gmail.svg" },
   { name: "n8n", icon: "/logos/tech/n8n.svg" },
-  { name: "Stripe", icon: "/logos/tech/stripe.svg" },
   { name: "OpenAI", icon: "/logos/tech/openai.svg" },
+  { name: "Stripe", icon: "/logos/tech/stripe.svg" },
+  { name: "Supabase", icon: "/logos/tech/supabase.svg" },
 ];
 
 export const navLinks = [
