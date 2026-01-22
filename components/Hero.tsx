@@ -52,7 +52,7 @@ export default function Hero() {
           className={
             phase === "intro"
               ? "text-center space-y-12"
-              : "space-y-12"
+              : "space-y-12 flex flex-col items-center"
           }
         >
           {/* Mobile-only header with BY NAUNAS (left) and rotating stat (right) */}
@@ -93,7 +93,7 @@ export default function Hero() {
           <motion.div 
             layout 
             transition={{ duration: tMorph, ease }}
-            className={phase === "final" ? "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8" : ""}
+            className={phase === "final" ? "flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full" : ""}
           >
             {/* LEFT RAIL (BY / NAUNAS) — hidden on mobile, visible on desktop */}
             <motion.div
@@ -110,7 +110,7 @@ export default function Hero() {
             </motion.div>
 
             <Word
-              text="CONSULTANT"
+              text="MEASURABLE"
               introOrder={3}            // 1: first shown, 2: second, 3: third
               phase={phase}
               tWord={tWord}
@@ -122,10 +122,10 @@ export default function Hero() {
             <motion.div
               layout
               transition={{ duration: tMorph, ease }}
-              className={phase === "intro" ? "" : "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"}
+              className={phase === "intro" ? "" : "flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full"}
             >
               <Word
-                text="AGENCIES"
+                text="AUTOMATED"
                 introOrder={2}
                 phase={phase}
                 tWord={tWord}
@@ -140,7 +140,7 @@ export default function Hero() {
                     ? { opacity: 1, x: 0, transition: { duration: tRails, ease, delay: 0.18 } }
                     : { opacity: 0, x: 36 }
                 }
-                className={phase === "final" ? "hidden md:flex bg-signal text-ink px-12 py-10 min-w-[400px] h-[120px] items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
+                className={phase === "final" ? "hidden md:flex bg-signal text-ink px-8 py-6 min-w-[280px] h-[120px] items-center justify-center rounded-[2px] shadow-lg" : "hidden"}
               >
                 <RotatingStat />
               </motion.div>
@@ -150,7 +150,7 @@ export default function Hero() {
             <motion.div
               layout
               transition={{ duration: tMorph, ease }}
-              className={phase === "intro" ? "" : "flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"}
+              className={phase === "intro" ? "" : "flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full"}
             >
               {/* Desktop: JOIN appears on left */}
               <motion.div
@@ -166,14 +166,14 @@ export default function Hero() {
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn inline-block min-w-[400px] h-[120px] flex items-center justify-center text-[clamp(20px,3.5vw,32px)] font-bold"
+                  className="btn inline-block min-w-[280px] h-[120px] flex items-center justify-center text-[clamp(20px,3.5vw,32px)] font-bold"
                 >
-                  JOIN
+                  INSTALL
                 </Link>
               </motion.div>
 
               <Word
-                text="COACHES"
+                text="PREDICTABLE"
                 introOrder={1}
                 phase={phase}
                 tWord={tWord}
@@ -199,7 +199,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="btn inline-block w-full max-w-[400px] h-[80px] flex items-center justify-center text-xl font-bold mx-auto"
               >
-                JOIN
+                INSTALL
               </Link>
             </motion.div>
           </motion.div>

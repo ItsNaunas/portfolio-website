@@ -8,7 +8,7 @@ export default function TechStack() {
   return (
     <section className="bg-signal py-12">
       <div className="text-center mb-8">
-        <h2 className="headline-sm text-ink">TECH STACK</h2>
+        <h2 className="headline-sm text-ink">INFRASTRUCTURE LAYER</h2>
       </div>
       <Marquee speed={50} gradient={false} pauseOnHover>
         {[...tech, ...tech, ...tech, ...tech].map((item, idx) => (
