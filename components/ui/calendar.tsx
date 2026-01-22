@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+// Cycle through different dates to show bookings happening
+const bookingDates = [11, 15, 18, 22, 25, 28];
+
 export function Calendar({
   className,
   mode,
@@ -15,9 +18,6 @@ export function Calendar({
 }) {
   const days = ["M", "T", "W", "T", "F", "S", "S"];
   const dates = Array.from({ length: 35 }, (_, i) => i + 1);
-  
-  // Cycle through different dates to show bookings happening
-  const bookingDates = [11, 15, 18, 22, 25, 28];
   const [activeDate, setActiveDate] = useState(bookingDates[0]);
   const [bookedDates, setBookedDates] = useState<number[]>([]);
 
