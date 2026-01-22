@@ -30,11 +30,12 @@ export function Calendar({
         
         // Add the previous date to booked dates (keep it highlighted)
         if (currentIndex >= 0) {
-          setBookedDates((prev) => {
-            if (!prev.includes(prev)) {
-              return [...prev, prev];
+          const previousDate = prev;
+          setBookedDates((booked) => {
+            if (!booked.includes(previousDate)) {
+              return [...booked, previousDate];
             }
-            return prev;
+            return booked;
           });
         }
         
